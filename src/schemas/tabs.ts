@@ -7,7 +7,6 @@ export const UpsertTabsSchema = z.object({
   document_level_id: z.number().min(1),
 });
 
-
 export const UpsertArchiveSchema = z.object({
   name: z.string().min(1),
   name_eng: z.string(),
@@ -15,5 +14,5 @@ export const UpsertArchiveSchema = z.object({
   document_level_id: z.number().min(1),
   validFrom: z.date(),
   validTo: z.date(),
-  acceptDate: z.date()
+  acceptDate: z.date(),
 });

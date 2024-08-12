@@ -70,7 +70,7 @@ const UpsertTabModal: FC<UpsertTabModalProps> = ({ closeModal, open, levels, edi
     <>
       <SuccessDialog open={showSuccess} closeModal={() => setShowSuccess(false)} />
       <UpsertModal
-        title={editItem ? 'ჩანართის რედაქტირება' : "ჩანართის შექმნა"}
+        title={editItem ? 'ჩანართის რედაქტირება' : 'ჩანართის შექმნა'}
         closeModal={closeModal}
         onCancel={closeModal}
         onOk={onSubmit}

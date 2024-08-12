@@ -6,10 +6,10 @@ import UpsertArchiveModal from './upsert-archive-modal';
 import { ITabLevel } from '@/types/tabs';
 
 interface ArchiveTabProps {
-  levels: ITabLevel[]
+  levels: ITabLevel[];
 }
 
-const ArchiveTab: FC<ArchiveTabProps> = ({levels}) => {
+const ArchiveTab: FC<ArchiveTabProps> = ({ levels }) => {
   const [open, setOpen] = useState(false);
 
   return (

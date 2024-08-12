@@ -70,7 +70,7 @@ const ArchiveModal: FC<ArchiveModalProps> = ({ closeModal, open, levels, editIte
     <>
       <SuccessDialog open={showSuccess} closeModal={() => setShowSuccess(false)} />
       <UpsertModal
-        title={editItem ? 'ჩანართის რედაქტირება' : "ჩანართის შექმნა"}
+        title={editItem ? 'ჩანართის რედაქტირება' : 'ჩანართის შექმნა'}
         closeModal={closeModal}
         onCancel={closeModal}
         onOk={onSubmit}

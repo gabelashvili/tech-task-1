@@ -22,16 +22,20 @@ const TabActions: FC<TabActionsProps> = ({ data, editItem }) => {
 
   return (
     <>
-     <Modal open={openRemove} closeModal={() => setOpenRemove(false)}>
-      <div className="flex w-full max-w-3xl flex-col items-center justify-center rounded-lg bg-white  shadow-sm">
-        <IoTrashBin className="mt-8 size-8" />
-        <h1 className="mt-6 font-bold">ნამდვილად გსურთ ჩანართის წაშლა?</h1>
-        <div className='space-x-3 mt-16 pb-6'>
-          <Button onClick={() => setOpenRemove(false)} className='py-2 bg-transparent border border-gray-200 text-black'>არა</Button>
-          <Button onClick={() => setOpenRemove(false)} className='py-2 bg-transparent border border-gray-200 text-black'>დიახ</Button>
+      <Modal open={openRemove} closeModal={() => setOpenRemove(false)}>
+        <div className="flex w-full max-w-3xl flex-col items-center justify-center rounded-lg bg-white shadow-sm">
+          <IoTrashBin className="mt-8 size-8" />
+          <h1 className="mt-6 font-bold">ნამდვილად გსურთ ჩანართის წაშლა?</h1>
+          <div className="mt-16 space-x-3 pb-6">
+            <Button onClick={() => setOpenRemove(false)} className="border border-gray-200 bg-transparent py-2 text-black">
+              არა
+            </Button>
+            <Button onClick={() => setOpenRemove(false)} className="border border-gray-200 bg-transparent py-2 text-black">
+              დიახ
+            </Button>
+          </div>
         </div>
-      </div>
-    </Modal>
+      </Modal>
       <UpsertTab editItem={editItem} levels={data} open={openEdit} closeModal={() => setOpenEdit(false)} />
       <Popper
         disableSameWidth
@@ -53,8 +57,7 @@ const TabActions: FC<TabActionsProps> = ({ data, editItem }) => {
               onClick={(e) => {
                 e.stopPropagation();
                 setReferenceElement(null);
-                setOpenEdit(true)
-                
+                setOpenEdit(true);
               }}
               className="flex cursor-pointer items-center gap-3 px-4 py-2.5 text-start text-sm text-gray-700"
             >
@@ -65,10 +68,10 @@ const TabActions: FC<TabActionsProps> = ({ data, editItem }) => {
               onClick={(e) => {
                 e.stopPropagation();
                 setReferenceElement(null);
-                setOpenRemove(true)
+                setOpenRemove(true);
               }}
             >
-             <IoTrashBin /> ჩანართის წაშლა
+              <IoTrashBin /> ჩანართის წაშლა
             </li>
           </ul>
         )}
