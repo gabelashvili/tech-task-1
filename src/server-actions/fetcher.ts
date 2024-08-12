@@ -5,7 +5,7 @@ import { cookies } from 'next/headers';
 
 // eslint-disable-next-line no-undef
 export const fetcher = async <T>(url: string, options?: RequestInit, contentType?: string): Promise<T> => {
-  const request = await fetch(`http://localhost:3002/api/v1/${url}`, {
+  const request = await fetch(`https://tech-task-2.onrender.com/api/v1/${url}`, {
     ...options,
     headers: {
       'Content-Type': contentType || 'application/json',
